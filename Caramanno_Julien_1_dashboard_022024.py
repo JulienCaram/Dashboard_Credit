@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -199,7 +198,3 @@ feature_choice = [key for key, value in cols_descriptive_names.items() if value 
 
 if st.button('Comparer avec les autres clients'):
     compare_client_to_others(df, client_id, feature_choice)
-
-# Lancement de l'application Streamlit
-if __name__ == '__main__':
-    st.run()
