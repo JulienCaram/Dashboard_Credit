@@ -114,8 +114,7 @@ st.title('Dashboard Scoring Client')
 client_id = st.number_input("Entrez l'ID du client", value=100002, step=1)
 
 if st.button('Prédire le score du client'):
-    api_url = "http://127.0.0.1:8000/predict/"
-    #api_url = "https://apicredit-bfd7efc2dfcb.herokuapp.com/predict/"
+    api_url = "https://apicredit-bfd7efc2dfcb.herokuapp.com/predict/"
     response = requests.post(api_url, data={'id_client': client_id})
     if response.status_code == 200:
         prediction_data = response.json()
