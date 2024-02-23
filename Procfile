@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run Caramanno_Julien_1_dashboard_022024.py
