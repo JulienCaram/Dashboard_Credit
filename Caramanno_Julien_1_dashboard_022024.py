@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,6 +10,7 @@ import shap
 import numpy as np
 import requests
 from pathlib import Path
+
 
 # Chargement du modèle
 df = pd.read_csv('./test_preprocess.csv')
@@ -197,6 +199,7 @@ feature_choice = [key for key, value in cols_descriptive_names.items() if value 
 
 if st.button('Comparer avec les autres clients'):
     compare_client_to_others(df, client_id, feature_choice)
-    
-# cd Desktop/Python/projet_8
-# streamlit run Caramanno_Julien_1_dashboard_022024.py
+
+# Lancement de l'application Streamlit
+if __name__ == '__main__':
+    st.run()
